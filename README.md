@@ -4,6 +4,8 @@ REACT | TYPESCRIPT
 
 This document will provide you with an overview of the app and guide you through the process of setting it up and starting it.
 
+![Ingenium Demo](Ingenium Cinema _app.gif)
+
 # Getting Started
 
 To start using the app, follow the steps below:
