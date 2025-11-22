@@ -43,7 +43,7 @@ npm run build
 
 ## Setting env
 
-To use Kinopoisk API you need to get the key from the Telegram bot @poiskkinodev_bot.
+To use PoiskKino API you need to get the key from the Telegram bot @poiskkinodev_bot.
 Also you read the documentation:
 ```
 https://api.poiskkino.dev/documentation
