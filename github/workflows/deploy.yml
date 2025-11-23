@@ -25,10 +25,8 @@ jobs:
       run: npm run build
 
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
+      uses: actions/deploy-pages@v4
+      run: npm run deploy
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build # Убедитесь, что это папка, куда Webpack или CRA складывает результат
-        # Если ваш сайт доступен по адресу username.github.io/repo-name/, 
-        # возможно, вам потребуется установить базовый путь (homepage) 
-        # в package.json или настроить переменную окружения PUBLIC_URL во время сборки.
+        publish_dir: ./build 
