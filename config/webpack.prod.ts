@@ -11,6 +11,7 @@ const prodConfig: Configuration = {
 		filename: '[name].[contenthash].js',
 		path: path.resolve(rootPath, './public/build'),
 		clean: true,
+		publicPath: "/Ingenium-Movies/"
 	},
 };
 
