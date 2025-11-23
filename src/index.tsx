@@ -18,7 +18,7 @@ const root: Root = createRoot(rootContainer);
 root.render(
 	<StrictMode>
 		<Provider store={store}>
-			<Router>
+			<Router basename="/Ingenium-Movies">
 				<App />
 			</Router>
 		</Provider>
