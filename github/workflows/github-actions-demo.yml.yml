@@ -24,9 +24,11 @@ jobs:
     - name: Build React application
       run: npm run build
 
+      
+    - name: Upload build artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: ./public/build
+
     - name: Deploy to GitHub Pages
       uses: actions/deploy-pages@v4
-      run: npm run deploy
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build 
