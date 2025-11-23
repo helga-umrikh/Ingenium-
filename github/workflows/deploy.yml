@@ -1,0 +1,34 @@
+name: Deploy Ingenium App to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '24'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build React application
+      run: npm run build
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build # Убедитесь, что это папка, куда Webpack или CRA складывает результат
+        # Если ваш сайт доступен по адресу username.github.io/repo-name/, 
+        # возможно, вам потребуется установить базовый путь (homepage) 
+        # в package.json или настроить переменную окружения PUBLIC_URL во время сборки.
