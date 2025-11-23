@@ -55,7 +55,7 @@ export const SearchBar: FC<TSearchBarProps> = ({ placeholder, onChange, isDeskto
 					$width='40px'
 					$zIndex={Z_INDEX_SEARCHICON}
 				>
-					<img src={'/assets/search_white.png'} alt='search icon' width={'100%'} />
+					<img src={`${process.env.PUBLIC_URL}assets/search_white.png`} alt='search icon' width={'100%'} />
 				</StyledContainer>
 			) : (
 				<StyledContainer
@@ -70,7 +70,7 @@ export const SearchBar: FC<TSearchBarProps> = ({ placeholder, onChange, isDeskto
 						onChange('');
 					}}
 				>
-					<img src={'/assets/cross_white.png'} alt='cross delete icon' width={'100%'} />
+					<img src={`${process.env.PUBLIC_URL}assets/cross_white.png`} alt='cross delete icon' width={'100%'} />
 				</StyledContainer>
 			)}
 		</StyledSearchBar>

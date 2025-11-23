@@ -18,8 +18,8 @@ export const Spinner: FC<TSpinnerProps> = ({ maxwidth, maxheight }) => {
 				maxheight={maxheight}
 			>
 				<picture>
-					<source srcSet='/assets/film-reel-mob.png' media={`(max-width: ${DESKTOP_MIN}px)`} />
-					<img src='/assets/film-reel-desk.png' alt='spinner' width={'100%'} height={'100%'} />
+					<source srcSet={`${process.env.PUBLIC_URL}assets/film-reel-mob.png`} media={`(max-width: ${DESKTOP_MIN}px)`} />
+					<img src={`${process.env.PUBLIC_URL}assets/film-reel-desk.png`} alt='spinner' width={'100%'} height={'100%'} />
 				</picture>
 			</StyledSpinner>
 		</StyledContainer>

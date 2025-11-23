@@ -16,12 +16,12 @@ export const FavoriteMovieCard: FC<TFavoriteMovieCardProps> = ({ movie, onClick 
 	return (
 		<StyledFavoriteMovieCard>
 			<picture>
-				<source srcSet={poster && poster.url ? poster.url : `/assets/movie_icon.png`} />
+				<source srcSet={poster && poster.url ? poster.url : `${process.env.PUBLIC_URL}assets/movie_icon.png`} />
 				<img
 					src={
 						poster && poster.url
 							? poster.url
-							: `/assets/movie_icon.png' alt='no poster movie tape icon`
+							: `${process.env.PUBLIC_URL}assets/movie_icon.png' alt='no poster movie tape icon`
 					}
 				/>
 			</picture>
@@ -34,7 +34,7 @@ export const FavoriteMovieCard: FC<TFavoriteMovieCardProps> = ({ movie, onClick 
 				</p>
 				<p>{rating?.kp.toFixed(1)}</p>
 			</StyledContainer>
-			<Button icon={'/assets/delete_icon.png'} size='btn-plain' onClick={onClick} />
+			<Button icon={`${process.env.PUBLIC_URL}assets/delete_icon.png`} size='btn-plain' onClick={onClick} />
 		</StyledFavoriteMovieCard>
 	);
 };

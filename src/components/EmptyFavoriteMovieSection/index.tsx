@@ -21,7 +21,7 @@ export const EmptyFavoriteMoviesSection: FC = () => {
 			>
 				<h3>Список любимых фильмов пуст</h3>
 				<picture>
-					<img src={'/assets/drama__icon.png'} />
+					<img src={`${process.env.PUBLIC_URL}assets/drama__icon.png`} />
 				</picture>
 
 				<p>
@@ -29,7 +29,7 @@ export const EmptyFavoriteMoviesSection: FC = () => {
 					<br /> Для того, чтобы найти любимое кино, перейдите на главную страницу
 				</p>
 				<picture>
-					<img src={'/assets/movie-empty__icon.png'} />
+					<img src={`${process.env.PUBLIC_URL}assets/movie-empty__icon.png`} />
 				</picture>
 				<Button title={'Вернуться назад'} onClick={() => navigate('/')} />
 			</StyledContainer>

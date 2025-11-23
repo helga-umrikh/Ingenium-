@@ -53,19 +53,19 @@ export const MovieCard = React.forwardRef(
 						<source
 							srcSet={
 								imageError
-									? '/assets/movie_icon.png'
+									? `${process.env.PUBLIC_URL}assets/movie_icon.png`
 									: poster && poster.url
 										? poster.url
-										: `/assets/movie_icon.png`
+										: `${process.env.PUBLIC_URL}assets/movie_icon.png`
 							}
 						/>
 						<img
 							src={
 								imageError
-									? '/assets/movie_icon.png'
+									? `${process.env.PUBLIC_URL}assets/movie_icon.png`
 									: poster && poster.url
 										? poster.url
-										: '/assets/movie_icon.png'
+										: `${process.env.PUBLIC_URL}assets/movie_icon.png`
 							}
 							alt='no poster movie tape icon'
 							onError={() => {
@@ -92,7 +92,7 @@ export const MovieCard = React.forwardRef(
 							}}
 						>
 							<img
-								src={`/assets/heart${favorites.some((favoriteMovie) => favoriteMovie.id === movie.id) ? '_filled' : ''}.svg`}
+								src={`${process.env.PUBLIC_URL}assets/heart${favorites.some((favoriteMovie) => favoriteMovie.id === movie.id) ? '_filled' : ''}.svg`}
 								alt='bookmark'
 							/>
 						</StyledContainer>

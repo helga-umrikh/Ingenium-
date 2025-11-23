@@ -1,5 +1,6 @@
 import path from 'path';
 import { Configuration } from 'webpack';
+import webpack from 'webpack';
 import 'webpack-dev-server';
 import { merge } from 'webpack-merge';
 
@@ -35,6 +36,11 @@ const devConfig: Configuration = {
 		open: true,
 		historyApiFallback: true,
 	},
+	plugins: [
+		new webpack.DefinePlugin({
+			'process.env.PUBLIC_URL': JSON.stringify('/'),
+		}),
+	]
 };
 
 export default merge(config, devConfig);
