@@ -27,6 +27,8 @@ jobs:
       run: npm install
 
     - name: Build React application
+      env:
+          REACT_APP_ACCESS_KEY: ${{ secrets.REACT_APP_ACCESS_KEY }}
       run: npm run build
 
       
